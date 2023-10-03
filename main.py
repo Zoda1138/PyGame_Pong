@@ -73,11 +73,25 @@ def mein():
         py.draw.circle(screen, WHITE, (x, y), 15)
 
         if x == 0:
-            scoreP += 1
-            screen.blit(font.render(str(scoreP), True, WHITE), (600, 50))
-        elif x == 640:
+
             scoreE += 1
-            screen.blit(font.render(str(scoreE), True, WHITE), (300, 50))
+            screen.blit(font.render(str(scoreE), True, WHITE), (600, 50))
+
+            x = 470
+            y = 320
+            py.draw.circle(screen, WHITE, (x, y), 15)
+            ballS[0] = -5
+
+        elif x == 940:
+
+            scoreP += 1
+            screen.blit(font.render(str(scoreP), True, WHITE), (300, 50))
+
+            x = 470
+            y = 320
+            py.draw.circle(screen, WHITE, (x, y), 15)
+            ballS[0] = 5
+
         else:
             screen.blit(font.render(str(scoreE), True, WHITE), (600, 50))
             screen.blit(font.render(str(scoreP), True, WHITE), (300, 50))
